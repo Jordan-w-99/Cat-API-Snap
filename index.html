@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="libraries/p5.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+
+</head>
+
+<body>
+
+  <div id="game-container">
+    <div id="game-btn-container">
+      <p>Grid<br>Size:</p>
+    </div>
+  </div>
+
+  <div id="info-container">
+    <div>
+      <h2>Description:</h2>
+      <p>
+        For this task, my approach was to make a simple game based on the card game 'Concentration',
+        but instead of cards, use randomly selected cat pictures from a fun API I found called: 'The Cat API'.<br>
+        The API itself returns JSON data holding information about each cat fetched such as breed, image categories, image URL, and various other data (I only really need the URL).<br>
+        When making the request I specify the amount of images needed, as well as the desired image file type and size.<br>
+        Each time a new round is loaded, it uses the Javascript Fetch API to get the required amount of images
+        and presents them as face-down cards.<br>
+        The player then has to click two cards to find a pair, if they are unsuccessful the cards turn back over.<br>
+        Once all the cards have been paired, you win!<br>
+        The player can choose different grid sizes from the dropdown under the game, and the cards will scale
+        accordingly to fill the canvas area.<br>
+      </p>
+    </div>
+    <div id="info-lists">
+      <div>
+        <h2>Technologies<br> used:</h2>
+        <ul>
+          <li>HTML, CSS, Javascript.</li>
+          <li><a href="https://p5js.org/">P5.js Javascript library.</a></li>
+          <li>Javascript Fetch API.</li>
+          <li><a href="https://thecatapi.com/">The Cat API.</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Things I'd like to improve:</h2>
+        <ul>
+          <li>Nicer menu art.</li>
+          <li>Add better page scaling.</li>
+          <li>Non uniform grid sizes (e.g 3x2, 6x3).</li>
+          <li>Keep image aspect ratios.</li>
+          <li>Add high score tracking for each size.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="Javascript/pairsGame.js"></script>
+  <script src="Javascript/dataHandler.js"></script>
+  <script src="Javascript/grid.js"></script>
+  <script src="Javascript/card.js"></script>
+  <script src="Javascript/sketch.js"></script>
+</body>
+
+</html>
